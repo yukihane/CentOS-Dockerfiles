@@ -4,15 +4,15 @@
 
 # PGVERSION is the full package version, e.g., 9.0.2
 # Note: the specfile inserts the correct value during package build
-PGVERSION=9.2.7
+PGVERSION=9.5.3
 
 # PGENGINE is the directory containing the postmaster executable
 # Note: the specfile inserts the correct value during package build
-PGENGINE=/usr/bin
+PGENGINE=/usr/pgsql-9.5/bin
 
 # PREVMAJORVERSION is the previous major version, e.g., 8.4, for upgrades
 # Note: the specfile inserts the correct value during package build
-PREVMAJORVERSION=9.2
+PREVMAJORVERSION=9.5
 
 # PREVPGENGINE is the directory containing the previous postmaster executable
 # Note: the specfile inserts the correct value during package build

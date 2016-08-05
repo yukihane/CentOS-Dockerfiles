@@ -9,7 +9,9 @@ MAINTAINER The CentOS Project <cloud-ops@centos.org>
 
 RUN yum -y update; yum clean all
 RUN yum -y install sudo epel-release; yum clean all
-RUN yum -y install postgresql-server postgresql postgresql-contrib supervisor; yum clean all
+RUN yum -y install https://download.postgresql.org/pub/repos/yum/9.5/redhat/rhel-7-x86_64/pgdg-centos95-9.5-2.noarch.rpm && \
+yum -y install postgresql95-server postgresql95-contrib supervisor && yum clean all
+
 
 ADD ./postgresql-setup /usr/bin/postgresql-setup
 ADD ./supervisord.conf /etc/supervisord.conf
